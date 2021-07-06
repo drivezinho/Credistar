@@ -1,9 +1,8 @@
-import React from "react";
-import "./Cadastrar.css";
+import { Form } from "../styled/form";
 
-function CadastrarForm() {
+export function Cadastrar() {
   return (
-    <form action="">
+    <Form action="">
       <fieldset>
         <legend>
           <h2>Empresas/Cadastrar Empresa</h2>
@@ -26,8 +25,6 @@ function CadastrarForm() {
           <input name="data_abertura" />
         </div>
       </fieldset>
-    </form>
+    </Form>
   );
 }
-
-export default CadastrarForm;

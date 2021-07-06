@@ -1,20 +1,14 @@
-import React from "react";
-import { BrowserRouter } from "react-router-dom";
-
-import Routes from "./routes";
-import SideBar from "./components/SideBar/sidebar";
-import Header from "./components/Header/header";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Home } from "./pages/home";
+import { Cadastrar } from "./pages/Cadastrar";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="tudo">
-        <SideBar />
-        <div className="content">
-          <Header />
-          <Routes />
-        </div>
-      </div>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/Cadastrar" exact component={Cadastrar} />
+      </Switch>
     </BrowserRouter>
   );
 }
